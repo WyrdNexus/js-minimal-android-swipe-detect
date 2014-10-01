@@ -15,7 +15,7 @@ js-minimal-android-swipe-detect
 ```
 
 ### Direction arg
-  [[float]] [radians](http://en.wikipedia.org/wiki/Radian)
+  [float] [radians](http://en.wikipedia.org/wiki/Radian)
    - Down: negative
    - Up: positive
    - Left: +/- pi
