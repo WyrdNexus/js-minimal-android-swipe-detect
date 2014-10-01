@@ -23,6 +23,6 @@ js-minimal-android-swipe-detect
     
    So from Left, clockwise, it starts at pi, goes to 0 when right, -pi back left again.
 
-
-method *pause* not yet implemented
-method *resume* not yet implemented
+## Methods
+ - *pause* not yet implemented
+ - *resume* not yet implemented
