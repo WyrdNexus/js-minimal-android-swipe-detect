@@ -15,10 +15,13 @@ js-minimal-android-swipe-detect
 ```
 
 ### Direction arg
-  [float]
-   - negatives are down
-   - positives are up
-   - +/- pi is left, 0 is right
+  [[float]] [radians](http://en.wikipedia.org/wiki/Radian)
+   - Down: negative
+   - Up: positive
+   - Left: +/- pi
+   - Right: 0
+    
+   So from Left, clockwise, it starts at pi, goes to 0 when right, -pi back left again.
 
 
 method *pause* not yet implemented
