@@ -1,0 +1,76 @@
+<html>
+<body>
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="uiSwipe.js" /></script>
+
+<script type="text/javascript">
+var swp;
+
+$("document").ready(function(){
+    
+    if (typeof uiSwipe !== "undefined"){
+        swp = new uiSwipe({
+        	minDistance: 0.15,
+        	mouseSwipe: true,
+
+            swipeUp: function(){ 
+                $("#testA").html("swipeUp!");
+            },
+
+            swipeDown: function(){ 
+                $("#testA").html("swipeDown!");
+            },
+
+            swipeLeft: function(){ 
+                $("#testA").html("swipeLeft!");
+            },
+
+            swipeRight: function(){ 
+                $("#testA").html("swipeRight!");
+            },
+
+            swipeAll: function(dir, dist){
+                var direction = "none";
+                if (Math.abs(dir) > 2.3) {
+                    var direction = "Left";
+                    
+                } else if (Math.abs(dir) < 0.8) {
+                    var direction = "Right";
+                    
+                } else if (dir < 0) {
+                    var direction = "Up";
+                    
+                } else if (dir > 0) {
+                    var direction = "Down";
+                    
+                }
+                $("#testB").html("DIR: "+ direction +"\n<br>DIST: "+ Math.round(dist));
+            }
+            
+        });
+    }
+
+});
+
+</script>
+
+<style type="text/css">
+	div.test {margin-top:10px; border-top:1px solid #fff;}
+	div#tester1:before { content: "1: "; }
+	div#tester2:before { content: "2: "; }
+	div#tester3:before { content: "3: "; }
+	div#tester4:before { content: "4: "; }
+	div#tester5:before { content: "5: "; }
+	div#testerA:before { content: "A: "; }
+	div#testerB:before { content: "B: "; }
+</style>
+<div class="test" id="testerA"></div>
+<div class="test" id="testerB"></div>
+<div class="test" id="tester1"></div>
+<div class="test" id="tester2"></div>
+<div class="test" id="tester3"></div>
+<div class="test" id="tester4"></div>
+<div class="test" id="tester5"></div>
+
+</body>
+</html>
