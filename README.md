@@ -19,13 +19,13 @@ js-minimal-android-swipe-detect
 ```
 
 ## Parameters
- swipeRight func()
- swipeLeft  func()
- swipeUp    func()
- swipeDown  func()
- swipeAll   func(  (radians)direction, (pixels)distance  )
- minDistance  (number) [val] > 1 (pixels) -OR- [val] < 1 (percent of page width)
- mouseSwipe   (bool) default:false  only detect touch 
+ - swipeRight func()
+ - swipeLeft  func()
+ - swipeUp    func()
+ - swipeDown  func()
+ - swipeAll   func(  (radians)direction, (pixels)distance  )
+ - minDistance  (number) [val] > 1 (pixels) -OR- [val] < 1 (percent of page width)
+ - mouseSwipe   (bool) default:false  only detect touch 
 
 ## Methods
  - *pause* not yet implemented
