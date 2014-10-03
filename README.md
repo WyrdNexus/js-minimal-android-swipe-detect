@@ -8,20 +8,24 @@ js-minimal-android-swipe-detect
 
 ## Implementation
 ```js
-  var s = new uiSwipe( function( direction, distance ){
-    console.log("Direction in Radians: "+ direction);
-    console.log("Distance Swiped in pixels: "+ distance);
+  var s = new uiSwipe({
+   // optional parameters - see sample.html
+   swipeRight: function(){
+    alert("Swiped Right!");
+   },
+   minDistance: 100,  // sets Minimum Distance of swipe to ~100px
+   mouseSwipe: true   // enables detection for mouse instead of just touch
   });
 ```
 
-### Direction arg
-  [float] [radians](http://en.wikipedia.org/wiki/Radian)
-   - Down: negative
-   - Up: positive
-   - Left: +/- pi
-   - Right: 0
-    
-   So from Left, clockwise, it starts at pi, goes to 0 when right, -pi back left again.
+## Parameters
+ swipeRight func()
+ swipeLeft  func()
+ swipeUp    func()
+ swipeDown  func()
+ swipeAll   func(  (radians)direction, (pixels)distance  )
+ minDistance  (number) [val] > 1 (pixels) -OR- [val] < 1 (percent of page width)
+ mouseSwipe   (bool) default:false  only detect touch 
 
 ## Methods
  - *pause* not yet implemented
