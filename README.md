@@ -8,14 +8,35 @@ js-minimal-android-swipe-detect
 
 ## Implementation
 ```js
-  var s = new uiSwipe({
-   // optional parameters - see sample.html
-   swipeRight: function(){
-    alert("Swiped Right!");
-   },
-   minDistance: 100,  // sets Minimum Distance of swipe to ~100px
-   mouseSwipe: true   // enables detection for mouse instead of just touch
-  });
+var swp;
+
+if (typeof uiSwipe !== "undefined"){
+    swp = new uiSwipe({
+    	minDistance: 0.1,
+    	mouseSwipe: true,
+
+        swipeUp: function(){ 
+            alert("swipeUp!");
+        },
+
+        swipeRight: function(){ 
+            alert("swipeRight!");
+        },
+
+        swipeAll: function(dir, dist){
+            var direction = "none";
+            if (Math.abs(dir) > 2.3) {
+                var direction = "Left";
+                
+            } else if (dir > 0) {
+                var direction = "Down";
+                
+            }
+            alert("DIR: "+ direction +"\n<br>DIST: "+ Math.round(dist));
+        }
+        
+    });
+}
 ```
 
 ## Parameters
