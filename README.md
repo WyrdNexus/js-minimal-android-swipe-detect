@@ -6,34 +6,42 @@ js-minimal-android-swipe-detect
   - Works on PC/mac browsers as well.
   - Currently only tested on Chrome, FF, IE8, IE9, Android 4.2
 
+## Simple Instatiation
+
+var swp = new uiSwipe({
+   swipeRight: function(){ 
+       alert("swipeRight!");
+   },
+}
+
 ## Implementation
 ```js
 var swp;
 
 if (typeof uiSwipe !== "undefined"){
     swp = new uiSwipe({
-    	minDistance: 0.1,
-    	mouseSwipe: true,
+      	minDistance: 0.1,
+      	mouseSwipe: true,
 
-        swipeUp: function(){ 
-            alert("swipeUp!");
-        },
+       swipeUp: function(){ 
+           alert("swipeUp!");
+       },
 
-        swipeRight: function(){ 
-            alert("swipeRight!");
-        },
+       swipeRight: function(){ 
+           alert("swipeRight!");
+       },
 
-        swipeAll: function(dir, dist){
-            var direction = "none";
-            if (Math.abs(dir) > 2.3) {
-                var direction = "Left";
-                
-            } else if (dir > 0) {
-                var direction = "Down";
-                
-            }
-            alert("DIR: "+ direction +"\n<br>DIST: "+ Math.round(dist));
-        }
+       swipeAll: function(dir, dist){
+           var direction = "none";
+           if (Math.abs(dir) > 2.3) {
+               var direction = "Left";
+               
+           } else if (dir > 0) {
+               var direction = "Down";
+               
+           }
+           alert("DIR: "+ direction +"\n<br>DIST: "+ Math.round(dist));
+       }
         
     });
 }
