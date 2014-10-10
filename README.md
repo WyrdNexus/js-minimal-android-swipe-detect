@@ -11,7 +11,7 @@ js-minimal-android-swipe-detect
 var swp = new uiSwipe({
    swipeRight: function(){ 
        alert("swipeRight!");
-   },
+   }
 }
 ```
 
