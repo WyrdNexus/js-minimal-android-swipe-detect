@@ -7,12 +7,13 @@ js-minimal-android-swipe-detect
   - Currently only tested on Chrome, FF, IE8, IE9, Android 4.2
 
 ## Simple Instatiation
-
+```js
 var swp = new uiSwipe({
    swipeRight: function(){ 
        alert("swipeRight!");
    },
 }
+```
 
 ## Implementation
 ```js
