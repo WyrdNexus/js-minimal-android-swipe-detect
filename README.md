@@ -6,7 +6,7 @@ js-minimal-android-swipe-detect
   - Works on PC/mac browsers as well.
   - Currently only tested on Chrome, FF, IE8, IE9, Android 4.2
 
-## Simple Instatiation
+## Simple Instantiation
 ```js
 var swp = new uiSwipe({
    swipeRight: function(){ 
