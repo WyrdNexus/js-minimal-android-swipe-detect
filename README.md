@@ -15,7 +15,7 @@ var swp = new uiSwipe({
 }
 ```
 
-## Implementation
+## Configurable Implementation
 ```js
 var swp;
 
