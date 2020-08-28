@@ -135,8 +135,8 @@ function uiSwipe(swipeActions){
     
     
     this.clear = function(){
-        this.tStart = [0,0];
-        this.tStop = [0,0];
+        this.pStart = [0,0];
+        this.pStop = [0,0];
         this.direction = 0;
         this.distance = 0;
     };
